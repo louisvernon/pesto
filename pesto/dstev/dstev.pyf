@@ -1,0 +1,20 @@
+!    -*- f90 -*-
+! Note: the context of this file is case sensitive.
+
+python module dstev ! in 
+    interface  ! in :dstev
+        subroutine dstev(jobz,n,d,e,z,ldz,work,info) ! in :dstev:dstev.f
+            character :: jobz
+            integer :: n
+            double precision dimension(*),intent(in) :: d
+            double precision dimension(*),intent(in) :: e
+            double precision dimension(ldz,*),intent(in,out) :: z
+            integer optional,check(shape(z,0)==ldz),depend(z) :: ldz=shape(z,0)
+            double precision dimension(*) :: work
+            integer :: info
+        end subroutine dstev
+    end interface 
+end python module dstev
+
+! This file was auto-generated with f2py (version:2).
+! See http://cens.ioc.ee/projects/f2py2e/

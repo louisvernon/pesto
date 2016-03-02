@@ -1,0 +1,46 @@
+{
+
+		"monte_carlo_method": "mmc"
+
+        "max_kmc_steps": 10,
+        
+        "superbasin_approach": 0, 
+        
+        "memory_kernel_length": 40, 
+        
+        
+        "scale_up": 1.1 ,
+        "scale_down" :0.98 ,
+     
+        "fixed_prefactor" : true, 
+        "prefactor" : 1e12, 
+        "simulation_temperature" : 300,  
+        
+        "embedding_energy_test" : true, 
+        "reconverge_saddles" : false,
+        
+        "end_relaxation" : 2,  
+        "relaxation_criterion" : 1E-2, 
+        
+ 
+        "search": {
+		        "max_transitions": 10,
+                "max_seq_failed_searches" : 20,
+                "max_duplicates" : 4,
+                "min_barrier": 0,
+                "max_barrier": 10, 
+                "rat_mode": 1, 
+				"search_mode": "RATN",
+				"saddle_mode": "DIRECT",
+                "embed_literal_processes": true ,
+        },
+        
+        
+        
+        "defect_classification" : 0 ,   
+   
+        "defect_radius" : 5.0,             
+        "shrink_to_defect" : true,      
+        "save_defect_object_connectivity": true, 
+        "dump_all_saddles": true 
+}

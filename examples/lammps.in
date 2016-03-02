@@ -1,0 +1,6 @@
+units metal
+atom_style atomic
+atom_modify     map array sort 0 0.0 # this line is essential for PESTO
+boundary p p p
+pair_style	eam/alloy
+pair_coeff * *  ../Cu_mishin1.eam.alloy Cu

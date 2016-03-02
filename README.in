@@ -1,0 +1,58 @@
+‎===========
+PESTO
+‎===========
+
+Potential Energy Surface Tools (PESTO) - is a python module designed to perform consistant molecular statics calculations across a large range of molecular dynamics packages.
+
+PESTO 0.1 offers compatibility with LAMMPS, LBOMD, DLPOLY and ART_MD.
+
+The simplest way PESTO interacts with MD codes is through command line execution, i.e. PESTO writes an input file, executes the MD binary and parses the output.
+
+PESTO offers a direct interface to LAMMPS via its python interface - this is the cleanest and prefered method of execution.
+
+Functionality
+‎=========
+
+Minimisers
+‎=========
+
+PESTO includes several optimizers including the LBFGS,‭ ‬conjugate gradient‭, ‬QuickMin,‭ ‬accelerated steepest descent and limited thermal annealing.
+
+Double Ended Saddle Point Finders
+‎=========
+Nudged Elastic Band‭ ‬-‭ ‬Recommended
+
+String Method‭
+The simple string method has been implemented.‭ ‬This variant uses linear interpolation along the string,‭ ‬however still typically yields the correct minimum energy pathway.
+
+Single Ended Saddle Point Finders
+‎=========
+ARTn Method‭
+The activation and relaxation noveau method has been implemented.‭ ‬This implementation uses the stepwise constrained LBFGS optimizer coupled with quadratic interpolation.
+
+RAT Method‭ ‬-‭ Preferred 
+The relaxation and translation method has been implemented.‭ ‬This variant uses the Lanczos method to invert the saddle,‭ ‬making saddle convergence a minimization problem.
+
+
+Defect Analysis
+‎=========
+Defect Module
+
+The defect module provides many means of identifying defect atoms that can be subsequently used in a transition search or optimization procedure.‭ 
+Defects can be identified through comparison to a reference lattice,‭ ‬examination of uncommon atomic energies,‭ ‬by species,‭ ‬by proximity to a given point and through various other means.
+
+Temperature Accelerated Dynamics‭
+=========
+A basic module provides the essentials of TAD.‭ ‬A small improvement on TAD,‭ ‬the modification of high temperature stop time based on the lowest energy barrier,‭ ‬has been incorporated.
+
+Dependencies
+‎========= 
+PESTO is dependent on,‭ ‬but not distributed with:
+
+NUMPY‭ ‬-‭ ‬http://numpy.scipy.org/
+SCIPY‭ ‬-‭ ‬http://www.scipy.org/
+k3match‭ ‬-‭ ‬http://pschella.github.com/k3match/
+
+PESTO by default utilizes a component of the LAPACK library.‭ ‬As the PESTO-LAPACK interface is built on the target machine,‭ ‬a LAPACK source file is distributed.‭ ‬LAPACK uses the BSD license which is included with this document.
+The use of LAPACK is not essential to the functionality of PESTO.
+

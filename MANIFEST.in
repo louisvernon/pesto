@@ -1,0 +1,6 @@
+include input/*
+include pesto/dstev/dstev.f
+include pesto/dstev/dstev.pyf
+recursive-include examples *.lammps *.py *.in *.alloy
+recursive-include docs *.html
+

@@ -1,0 +1,143 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module pesto.pminimise</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="pesto.html"><font color="#ffffff">pesto</font></a>.pminimise</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/opt/local/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pesto/pminimise.py">/opt/local/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages/pesto/pminimise.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="scipy.optimize.cobyla.html">scipy.optimize.cobyla</a><br>
+<a href="copy.html">copy</a><br>
+<a href="scipy.optimize.lbfgsb.html">scipy.optimize.lbfgsb</a><br>
+<a href="scipy.optimize.linesearch.html">scipy.optimize.linesearch</a><br>
+<a href="math.html">math</a><br>
+<a href="scipy.optimize.minpack.html">scipy.optimize.minpack</a><br>
+</td><td width="25%" valign=top><a href="scipy.optimize.minpack2.html">scipy.optimize.minpack2</a><br>
+<a href="scipy.optimize.moduleTNC.html">scipy.optimize.moduleTNC</a><br>
+<a href="scipy.optimize.nonlin.html">scipy.optimize.nonlin</a><br>
+<a href="numpy.html">numpy</a><br>
+<a href="scipy.optimize.optimize.html">scipy.optimize.optimize</a><br>
+<a href="os.html">os</a><br>
+</td><td width="25%" valign=top><a href="pesto.pglobals.html">pesto.pglobals</a><br>
+<a href="pesto.pio.html">pesto.pio</a><br>
+<a href="pesto.ptimeintegration.html">pesto.ptimeintegration</a><br>
+<a href="pesto.putil.html">pesto.putil</a><br>
+<a href="random.html">random</a><br>
+<a href="scipy.optimize.slsqp.html">scipy.optimize.slsqp</a><br>
+</td><td width="25%" valign=top><a href="sys.html">sys</a><br>
+<a href="time.html">time</a><br>
+<a href="scipy.optimize.tnc.html">scipy.optimize.tnc</a><br>
+<a href="scipy.optimize.zeros.html">scipy.optimize.zeros</a><br>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-calculate_first_step"><strong>calculate_first_step</strong></a>(lattice, step, search_direction, exclusion, dv, dv_total, ref)</dt></dl>
+ <dl><dt><a name="-dot"><strong>dot</strong></a>(...)</dt><dd><tt><a href="#-dot">dot</a>(a,&nbsp;b,&nbsp;out=None)<br>
+&nbsp;<br>
+Dot&nbsp;product&nbsp;of&nbsp;two&nbsp;arrays.<br>
+&nbsp;<br>
+For&nbsp;2-D&nbsp;arrays&nbsp;it&nbsp;is&nbsp;equivalent&nbsp;to&nbsp;matrix&nbsp;multiplication,&nbsp;and&nbsp;for&nbsp;1-D<br>
+arrays&nbsp;to&nbsp;inner&nbsp;product&nbsp;of&nbsp;vectors&nbsp;(without&nbsp;complex&nbsp;conjugation).&nbsp;For<br>
+N&nbsp;dimensions&nbsp;it&nbsp;is&nbsp;a&nbsp;sum&nbsp;product&nbsp;over&nbsp;the&nbsp;last&nbsp;axis&nbsp;of&nbsp;`a`&nbsp;and<br>
+the&nbsp;second-to-last&nbsp;of&nbsp;`b`::<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#-dot">dot</a>(a,&nbsp;b)[i,j,k,m]&nbsp;=&nbsp;sum(a[i,j,:]&nbsp;*&nbsp;b[k,:,m])<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+a&nbsp;:&nbsp;array_like<br>
+&nbsp;&nbsp;&nbsp;&nbsp;First&nbsp;argument.<br>
+b&nbsp;:&nbsp;array_like<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Second&nbsp;argument.<br>
+out&nbsp;:&nbsp;ndarray,&nbsp;optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Output&nbsp;argument.&nbsp;This&nbsp;must&nbsp;have&nbsp;the&nbsp;exact&nbsp;kind&nbsp;that&nbsp;would&nbsp;be&nbsp;returned<br>
+&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;it&nbsp;was&nbsp;not&nbsp;used.&nbsp;In&nbsp;particular,&nbsp;it&nbsp;must&nbsp;have&nbsp;the&nbsp;right&nbsp;type,&nbsp;must&nbsp;be<br>
+&nbsp;&nbsp;&nbsp;&nbsp;C-contiguous,&nbsp;and&nbsp;its&nbsp;dtype&nbsp;must&nbsp;be&nbsp;the&nbsp;dtype&nbsp;that&nbsp;would&nbsp;be&nbsp;returned<br>
+&nbsp;&nbsp;&nbsp;&nbsp;for&nbsp;`<a href="#-dot">dot</a>(a,b)`.&nbsp;This&nbsp;is&nbsp;a&nbsp;performance&nbsp;feature.&nbsp;Therefore,&nbsp;if&nbsp;these<br>
+&nbsp;&nbsp;&nbsp;&nbsp;conditions&nbsp;are&nbsp;not&nbsp;met,&nbsp;an&nbsp;exception&nbsp;is&nbsp;raised,&nbsp;instead&nbsp;of&nbsp;attempting<br>
+&nbsp;&nbsp;&nbsp;&nbsp;to&nbsp;be&nbsp;flexible.<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+output&nbsp;:&nbsp;ndarray<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Returns&nbsp;the&nbsp;dot&nbsp;product&nbsp;of&nbsp;`a`&nbsp;and&nbsp;`b`.&nbsp;&nbsp;If&nbsp;`a`&nbsp;and&nbsp;`b`&nbsp;are&nbsp;both<br>
+&nbsp;&nbsp;&nbsp;&nbsp;scalars&nbsp;or&nbsp;both&nbsp;1-D&nbsp;arrays&nbsp;then&nbsp;a&nbsp;scalar&nbsp;is&nbsp;returned;&nbsp;otherwise<br>
+&nbsp;&nbsp;&nbsp;&nbsp;an&nbsp;array&nbsp;is&nbsp;returned.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;If&nbsp;`out`&nbsp;is&nbsp;given,&nbsp;then&nbsp;it&nbsp;is&nbsp;returned.<br>
+&nbsp;<br>
+Raises<br>
+------<br>
+ValueError<br>
+&nbsp;&nbsp;&nbsp;&nbsp;If&nbsp;the&nbsp;last&nbsp;dimension&nbsp;of&nbsp;`a`&nbsp;is&nbsp;not&nbsp;the&nbsp;same&nbsp;size&nbsp;as<br>
+&nbsp;&nbsp;&nbsp;&nbsp;the&nbsp;second-to-last&nbsp;dimension&nbsp;of&nbsp;`b`.<br>
+&nbsp;<br>
+See&nbsp;Also<br>
+--------<br>
+vdot&nbsp;:&nbsp;Complex-conjugating&nbsp;dot&nbsp;product.<br>
+tensordot&nbsp;:&nbsp;Sum&nbsp;products&nbsp;over&nbsp;arbitrary&nbsp;axes.<br>
+einsum&nbsp;:&nbsp;Einstein&nbsp;summation&nbsp;convention.<br>
+&nbsp;<br>
+Examples<br>
+--------<br>
+&gt;&gt;&gt;&nbsp;np.<a href="#-dot">dot</a>(3,&nbsp;4)<br>
+12<br>
+&nbsp;<br>
+Neither&nbsp;argument&nbsp;is&nbsp;complex-conjugated:<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;np.<a href="#-dot">dot</a>([2j,&nbsp;3j],&nbsp;[2j,&nbsp;3j])<br>
+(-13+0j)<br>
+&nbsp;<br>
+For&nbsp;2-D&nbsp;arrays&nbsp;it's&nbsp;the&nbsp;matrix&nbsp;product:<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;a&nbsp;=&nbsp;[[1,&nbsp;0],&nbsp;[0,&nbsp;1]]<br>
+&gt;&gt;&gt;&nbsp;b&nbsp;=&nbsp;[[4,&nbsp;1],&nbsp;[2,&nbsp;2]]<br>
+&gt;&gt;&gt;&nbsp;np.<a href="#-dot">dot</a>(a,&nbsp;b)<br>
+array([[4,&nbsp;1],<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[2,&nbsp;2]])<br>
+&nbsp;<br>
+&gt;&gt;&gt;&nbsp;a&nbsp;=&nbsp;np.arange(3*4*5*6).reshape((3,4,5,6))<br>
+&gt;&gt;&gt;&nbsp;b&nbsp;=&nbsp;np.arange(3*4*5*6)[::-1].reshape((5,4,6,3))<br>
+&gt;&gt;&gt;&nbsp;np.<a href="#-dot">dot</a>(a,&nbsp;b)[2,3,2,1,2,2]<br>
+499128<br>
+&gt;&gt;&gt;&nbsp;sum(a[2,3,2,:]&nbsp;*&nbsp;b[1,2,:,2])<br>
+499128</tt></dd></dl>
+ <dl><dt><a name="-invquad_line_min"><strong>invquad_line_min</strong></a>(lattice, direction, step, tol)</dt></dl>
+ <dl><dt><a name="-main"><strong>main</strong></a>()</dt></dl>
+ <dl><dt><a name="-minimise_lattice"><strong>minimise_lattice</strong></a>(lattice, mintype, mintol)</dt></dl>
+ <dl><dt><a name="-quadratic_line_min"><strong>quadratic_line_min</strong></a>(lattice, direction, step, tol)</dt></dl>
+ <dl><dt><a name="-secant_line_min"><strong>secant_line_min</strong></a>(lattice, direction, step, tol)</dt></dl>
+ <dl><dt><a name="-sheppards_lbfgs"><strong>sheppards_lbfgs</strong></a>(lattice, tolerance<font color="#909090">=0.01</font>, max_move<font color="#909090">=0.2</font>, memory<font color="#909090">=50</font>, alpha<font color="#909090">=0.05</font>, scale<font color="#909090">=3</font>)</dt></dl>
+ <dl><dt><a name="-sqrt"><strong>sqrt</strong></a>(...)</dt><dd><tt><a href="#-sqrt">sqrt</a>(x)<br>
+&nbsp;<br>
+Return&nbsp;the&nbsp;square&nbsp;root&nbsp;of&nbsp;x.</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>absolute_import</strong> = _Feature((2, 5, 0, 'alpha', 1), (3, 0, 0, 'alpha', 0), 16384)<br>
+<strong>division</strong> = _Feature((2, 2, 0, 'alpha', 2), (3, 0, 0, 'alpha', 0), 8192)<br>
+<strong>dv</strong> = []<br>
+<strong>dv_total</strong> = 0<br>
+<strong>exclusion</strong> = 0<br>
+<strong>print_function</strong> = _Feature((2, 6, 0, 'alpha', 2), (3, 0, 0, 'alpha', 0), 65536)<br>
+<strong>ref</strong> = 0<br>
+<strong>variable_tol</strong> = True</td></tr></table>
+</body></html>
